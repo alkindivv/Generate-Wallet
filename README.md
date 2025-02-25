@@ -22,7 +22,7 @@ Script sederhana untuk generate multiple Ethereum wallet secara otomatis dengan 
 1. Clone repository ini:
 
 ```bash
-git clone [URL_REPOSITORY_ANDA]
+git clone https://github.com/alkindivv/Generate-Wallet.git
 cd generate-wallet
 ```
 
