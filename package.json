@@ -1,16 +1,16 @@
 {
-  "name": "generate-wallet",
+  "name": "ethereum-wallet-generator",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "Script untuk generate Ethereum wallet",
+  "main": "generateWallet.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node generateWallet.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "dependencies": {
-    "ethers": "^6.13.5",
+    "ethers": "^6.11.1",
     "readline-sync": "^1.4.10"
   }
 }

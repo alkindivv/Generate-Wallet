@@ -1,73 +1,62 @@
-# Generate Ethereum Wallet
+# Ethereum Wallet Generator
 
-Script sederhana untuk generate multiple Ethereum wallet secara otomatis dengan Node.js dan ethers.js.
+Kumpulan script untuk generate dan mengelola Ethereum wallet.
 
 ## Fitur
 
-- Generate multiple Ethereum wallet sekaligus
-- Menyimpan informasi wallet dalam format JSON
-- Informasi yang disimpan untuk setiap wallet:
-  - Alamat wallet (address)
-  - Private key
-  - Seed phrase (mnemonic)
-- Output disimpan ke file JSON dengan timestamp
+- Generate wallet Ethereum (alamat, private key, seed phrase)
+- Generate vanity address dengan pola tertentu
+- Generate random amount untuk daftar alamat
+- Menyimpan data wallet dalam format JSON
 
 ## Persyaratan
 
-- Node.js (versi 12 atau lebih baru)
-- NPM (Node Package Manager)
-
-## Instalasi
-
-1. Clone repository ini:
+### Untuk Script Python
 
 ```bash
-git clone https://github.com/alkindivv/Generate-Wallet.git
-cd generate-wallet
+pip install -r requirements.txt
 ```
 
-2. Install dependensi yang diperlukan:
+### Untuk Script Node.js
 
 ```bash
 npm install
 ```
 
-## Cara Penggunaan
+## Penggunaan
 
-1. Jalankan script dengan perintah:
+### Generate Wallet (Node.js)
 
 ```bash
+npm start
+# atau
 node generateWallet.js
 ```
 
-2. Masukkan jumlah wallet yang ingin di-generate ketika diminta
+### Generate Vanity Address (Python)
 
-3. Script akan menghasilkan file JSON dengan format nama `wallets_[timestamp].json` yang berisi semua informasi wallet
-
-## Format Output
-
-File JSON yang dihasilkan akan memiliki format seperti ini:
-
-```json
-[
-  {
-    "index": 1,
-    "address": "0x...",
-    "privateKey": "0x...",
-    "mnemonic": "word1 word2 ... word12"
-  },
-  ...
-]
+```bash
+python3 generate_vanity_wallet.py
 ```
 
-## Peringatan Keamanan
+### Generate Random Amounts (Python)
 
-⚠️ **PENTING:**
+```bash
+python3 generate_random_amounts.py
+```
 
-- Jangan pernah membagikan private key atau mnemonic phrase Anda kepada siapapun
-- Simpan backup dari file JSON yang dihasilkan di tempat yang aman
-- Pastikan komputer Anda bebas dari malware sebelum generate wallet
-- Script ini sebaiknya dijalankan di lingkungan yang aman dan terisolasi
+## Keamanan
+
+- Simpan private key dan seed phrase dengan aman
+- Jangan bagikan informasi wallet kepada siapapun
+- Gunakan komputer yang aman saat menjalankan script
+- Backup data wallet secara offline
+
+## Catatan
+
+- Script vanity address membutuhkan waktu untuk menemukan alamat yang sesuai
+- CPU usage bisa tinggi saat mencari vanity address
+- Data wallet disimpan dalam format JSON dengan timestamp
 
 ## Dependensi
 
