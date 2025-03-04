@@ -3,6 +3,7 @@ node_modules/
 
 # Generated files
 wallets_*.json
+addresses_with_amounts.txt
 
 # Environment variables
 .env
